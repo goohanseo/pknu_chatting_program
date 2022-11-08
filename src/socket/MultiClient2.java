@@ -13,10 +13,10 @@ public class MultiClient2 {
         Socket socket = null;
         BufferedReader in = null;
         try {
-            socket = new Socket("localhost", 5050); //서버 소켓 연결
+            socket = new Socket("localhost", 5000); //서버 소켓 연결
             System.out.println("[서버와 연결되었습니다.]");
 
-            String name = "user" + (int) (Math.random() * 10); //클라이언트 이름 생성
+            String name = "김철수"; //클라이언트 이름 생성
             Thread sendThread = new SendThread(socket, name); //sendthread에 소켓과 이름 전달
             sendThread.start(); //sendthread 실행
 
